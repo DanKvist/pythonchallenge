@@ -24,11 +24,23 @@ source = source[:endComment]
 
 source = source.decode()
 
-charList = "".join(set(source))
+charString = "".join(set(source))
 
-print(charList)
-for k in range(0, len(charList)):
-	print(charList[k], ": ", source.count(charList[k]))
+indexList = []
+print(charString)
+for k in range(0, len(charString)):
+	char = charString[k]
+	occurrences = source.count(char)
+	print(char, ": ", occurrences)
+	if occurrences == 1:
+		indexList.append(source.find(char))
+
+
+indexList.sort()
+print(indexList)
+
+for k in indexList:
+	print(source[k])
 
 #commentsPos = source.find(commentStr)
 
