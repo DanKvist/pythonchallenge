@@ -8,8 +8,6 @@ r = requests.get(url)
 
 source = r.content
 
-#print(source)
-
 firstComment = source.find(b"<!--")
 
 source = source[firstComment+4:]
@@ -42,6 +40,6 @@ print(indexList)
 for k in indexList:
 	print(source[k])
 
-#commentsPos = source.find(commentStr)
 
-#print(comments)
+
+"Solution: www.pythonchallenge.com/pc/def/equality.html 
